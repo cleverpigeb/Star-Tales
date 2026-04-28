@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Star Tales
 
-## Getting Started
+Star Tales 是一个仍处于前端开发阶段的应用式网站。项目目标是让用户借助 AI 创建自己的“角色”，并将这些角色放入预设故事中，进一步对已有故事进行改编、续写与再创作。
 
-First, run the development server:
+当前版本主要聚焦于网站入口、欢迎页视觉效果、基础页面结构与前端交互体验。产品能力、故事系统、AI 接入方式和用户功能仍在持续设计与开发中。
+
+## 项目状态
+
+- 开发阶段：前端开发中
+- 当前重点：欢迎页、视觉表现、基础交互与项目结构
+- 后续方向：角色创建、故事选择、AI 改写流程、用户数据与内容管理
+
+## 技术栈
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [pnpm](https://pnpm.io/)
+
+## 功能规划
+
+- AI 角色创建：让用户生成或编辑可参与故事的原创角色。
+- 故事融合：将用户角色放入预设故事背景中。
+- 故事改编：基于用户输入与 AI 生成能力，对故事进行续写、重构或分支创作。
+- 应用式体验：以更接近产品应用的方式组织页面、动画与交互流程。
+
+## 本地开发
+
+请先确保本地已安装 Node.js 和 pnpm。
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+启动后在浏览器中打开：
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 常用脚本
 
-## Learn More
+```bash
+pnpm dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+启动本地开发服务器。
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+构建生产版本。
 
-## Deploy on Vercel
+```bash
+pnpm lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+运行 ESLint 检查。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm build:backgrounds
+```
+
+根据源图生成不同尺寸的背景资源。
+
+## 项目结构
+
+```text
+src/
+  app/                 Next.js App Router 页面与全局样式
+  components/          页面组件与欢迎页相关组件
+  config/              前端配置
+  hooks/               React Hooks
+  lib/                 通用工具与纹理生成逻辑
+  mocks/               前端开发阶段使用的模拟数据
+public/
+  backgrounds/         页面背景资源
+scripts/               项目脚本
+```
+
+## 说明
+
+本项目仍处于早期开发阶段，README 中的功能描述会随着产品设计和实现进度继续调整。当前仓库内容以展示和推进前端开发为主，尚不代表最终产品形态。
